@@ -55,7 +55,7 @@ export class CadastroPage implements OnInit {
       this.cadastro.nome = this.formCadastro.get('nome').value;
       this.cadastro.descricao = this.formCadastro.get('descricao').value;
       this.cadastro.validade = this.formCadastro.get('validade').value;
-      this.cadastro.preco = this.formCadastro.get('preco').value;
+      this.cadastro.preco = this.formCadastro.get('preco').value.replace(',',',');
 
       const id = (await this.cadastroService.buscarID()) as number;
       this.cadastro.id = id;

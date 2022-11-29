@@ -3,6 +3,7 @@
     <ion-title>
       Tab 1
     </ion-title>
+      <ion-back-button><ion-icon name="add-outline"></ion-icon></ion-back-button>
   </ion-toolbar>
 </ion-header>
 
@@ -10,6 +11,7 @@
 
   <ion-item *ngFor="let prdt of listaCadastros">
     <ion-label>{{prdt.nome}}</ion-label>
+    <label>{{prdt.descricao}}</label>
   </ion-item>
 
 </ion-content>

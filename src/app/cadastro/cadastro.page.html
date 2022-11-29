@@ -33,7 +33,7 @@
       <!--fim-->
       <ion-item counter="true" fill="clear">
         <ion-label position="floating">Validade:</ion-label>
-        <ion-input formControlName="validade"></ion-input>
+        <ion-input type="date" placeholder="" formControlName="validade"></ion-input>
       </ion-item>
       <ng-container *ngFor="let erro of mensagensErro.validade">
         <span class="msg-erro" *ngIf="validade?.errors?.[erro.tipo] && (validade?.dirty || validade?.touched)">
@@ -56,7 +56,7 @@
 
 <ion-grid>
   <ion-row>
-    <ion-button fill="block" (click)="salvar()"><u>Registrar</u></ion-button>
+    <ion-button expand="full" (click)="salvar()"><u>Registrar</u></ion-button>
   </ion-row>
 </ion-grid>
 </ion-content>
