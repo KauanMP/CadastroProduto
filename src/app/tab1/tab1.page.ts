@@ -25,4 +25,12 @@ export class Tab1Page implements OnInit {
   ionViewWillEnter(){
     this.buscarProdutos();
   }
+
+  async deletar(prdt: Cadastro) {
+    if (confirm(`Deseja Deletar ${prdt.nome}?`)) {
+      await this.produtoService.deletar(prdt.id);
+      this.route.navigateByUrl("/cadastro");
+    }
+
+  }
 }

@@ -1,14 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>cadastro</ion-title>
+    <ion-img src="https://www.simplanodesaude.com.br/wp-content/uploads/2019/04/Recadas.png" ></ion-img>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
   <ion-list>
-    <ion-item>
-      <ion-label class="centralizarTexto"><strong>Cadastro</strong></ion-label>
+    <ion-item color="medium">
+      <ion-label color="warning" class="centralizarTexto">
+        <strong>Cadastro</strong>
+      </ion-label>
     </ion-item>
     <form [formGroup]="formCadastro">
       <ion-item>
@@ -55,8 +57,8 @@
   </ion-list>
 
 <ion-grid>
-  <ion-row>
-    <ion-button expand="full" (click)="salvar()"><u>Registrar</u></ion-button>
+  <ion-row class="ion-registrar">
+    <ion-button fill="clear" expand="block" (click)="salvar()"><u>Registrar</u></ion-button>
   </ion-row>
 </ion-grid>
 </ion-content>
